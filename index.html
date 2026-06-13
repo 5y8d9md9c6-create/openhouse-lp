@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>この週末、理想の暮らしを体感しませんか。 | HIKARI HOME</title>
+    <meta name="description" content="実際の住まいだからこそ分かる、広さ・動線・陽当たり。期間限定オープンハウス開催中。完全予約制でのご案内です。">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Noto Serif JP & Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#C79F5E',
+                            goldHover: '#B38D4F',
+                            darkBlue: '#051122',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif JP', 'serif'],
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Smooth anti-aliased font rendering */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Ken Burns Zoom Effect for background */
+        @keyframes kenburns {
+            0% { transform: scale(1.03); }
+            100% { transform: scale(1.08); }
+        }
+        .animate-kenburns {
+            animation: kenburns 15s ease-out forwards;
+        }
+
+        /* Fade-in animation for content */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        /* Custom Scroll Down indicator animation */
+        @keyframes scroll-line {
+            0% { transform: translateY(-100%); }
+            80% { transform: translateY(200%); }
+            100% { transform: translateY(200%); }
+        }
+        .animate-scroll-line {
+            animation: scroll-line 2.2s infinite cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+</head>
+<body class="font-sans text-white bg-brand-darkBlue min-h-screen relative overflow-x-hidden select-none">
+
+    <!-- Hero Section Container -->
+    <section class="relative min-h-screen w-full flex flex-col justify-between overflow-hidden">
+        
+        <!-- Background Image with Ken Burns effect and gradient overlays -->
+        <div class="absolute inset-0 z-0">
+            <img src="./house_dusk.png" alt="モデルハウス夜景" class="w-full h-full object-cover object-center">
+            <!-- Gradients to ensure text readability -->
+            <!-- Mobile overlay: vertical dark gradient -->
+            <!-- Desktop overlay: left-to-right dark gradient + bottom dark gradient -->
+            <div class="absolute inset-0 bg-gradient-to-b from-[#051122]/85 via-[#051122]/45 to-[#051122]/90 md:bg-gradient-to-r md:from-[#051122]/95 md:via-[#051122]/50 md:to-transparent"></div>
+            <div class="absolute inset-0 hidden md:block bg-gradient-to-b from-[#051122]/20 via-transparent to-[#051122]/95"></div>
+        </div>
+
+        <!-- Header (Logo & reservation status tag) -->
+        <header class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 py-6 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <!-- House Outline Icon -->
+                <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span class="font-serif text-lg sm:text-xl tracking-[0.25em] font-medium text-white transition-opacity duration-300 hover:opacity-80">HIKARI HOME</span>
+            </div>
+            
+            <!-- Reservation Tag -->
+            <button onclick="openModal()" class="border border-brand-gold/75 text-brand-gold text-xs sm:text-sm tracking-[0.2em] font-medium px-4 py-1.5 rounded-sm bg-brand-darkBlue/30 backdrop-blur-sm transition-all duration-300 hover:bg-brand-gold hover:text-white hover:border-brand-gold hover:shadow-lg hover:shadow-brand-gold/20">
+                完全予約制
+            </button>
+        </header>
+
+        <!-- Main Catchphrase & Content -->
+        <main class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-12 flex-grow flex flex-col justify-center text-left py-12 md:py-20">
+            <div class="max-w-2xl">
+                <!-- Main Catchphrase -->
+                <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-[0.18em] text-white animate-fade-in-up">
+
+    <span class="block mb-6">
+        この週末、
+    </span>
+
+    <span class="block mb-6">
+        <span class="text-brand-gold">理想の暮らし</span>を
+    </span>
+
+    <span class="block">
+        体感しませんか。
+    </span>
+
+</h1>
+                
+                <!-- Subtext description -->
+                <p class="mt-6 md:mt-8 font-sans text-sm sm:text-base md:text-lg text-white/90 font-light tracking-[0.18em] leading-loose animate-fade-in-up delay-100">
+                    実際の住まいだからこそ分かる、<br>
+                    広さ・動線・陽当たり。<br>
+                    期間限定オープンハウス開催中。
+                </p>
+                
+                <!-- Call to Action Button -->
+                <div class="mt-8 md:mt-10 animate-fade-in-up delay-200">
+                    <button onclick="openModal()" class="inline-flex items-center space-x-3 bg-brand-gold hover:bg-brand-goldHover active:scale-[0.98] text-white px-12 py-6 rounded-xl text-base sm:text-lg font-medium tracking-[0.2em] shadow-lg transition-all duration-300 hover:shadow-brand-gold/20 hover:-translate-y-0.5 group">
+                        <!-- Calendar Icon -->
+                        <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>来場予約はこちら</span>
+                        <!-- Chevron Right Icon -->
+                        <svg class="w-5 h-5 text-white transform transition-transform duration-300 group-hover:translate-x-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Panel & Scroll indicator -->
+        <footer class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pb-6 flex flex-col items-center">
+            
+            <!-- Event Information Panel -->
+<div class="w-full bg-[#051122]/70 border border-white/10 backdrop-blur-md rounded-sm px-3 py-3 md:px-8 md:py-8 grid grid-cols-3 gap-0 shadow-2xl animate-fade-in-up delay-300">
+
+  <!-- Column 1: Date -->
+  <div class="flex flex-col items-center justify-center border-r border-white/15 px-2 md:px-6">
+    <div class="flex items-center gap-1.5 md:gap-3 text-brand-gold mb-1 md:mb-3">
+      <svg class="w-3.5 h-3.5 md:w-6 md:h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span class="text-[9px] md:text-base font-semibold tracking-[0.16em] whitespace-nowrap">
+        開催日
+      </span>
+    </div>
+
+    <p class="text-white text-[10px] md:text-xl leading-[1.55] tracking-[0.08em] text-center font-medium">
+      6/15(土)<br class="md:hidden"> <span class="hidden md:inline">・</span>6/16(日)
+    </p>
+  </div>
+
+  <!-- Column 2: Time -->
+  <div class="flex flex-col items-center justify-center border-r border-white/15 px-2 md:px-6">
+    <div class="flex items-center gap-1.5 md:gap-3 text-brand-gold mb-1 md:mb-3">
+      <svg class="w-3.5 h-3.5 md:w-6 md:h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+      <span class="text-[9px] md:text-base font-semibold tracking-[0.16em] whitespace-nowrap">
+        開催時間
+      </span>
+    </div>
+
+    <p class="text-white text-[10px] md:text-xl leading-[1.55] tracking-[0.08em] text-center font-medium">
+      10:00-17:00
+    </p>
+  </div>
+
+  <!-- Column 3: Location -->
+  <div class="flex flex-col items-center justify-center px-2 md:px-6">
+    <div class="flex items-center gap-1.5 md:gap-3 text-brand-gold mb-1 md:mb-3">
+      <svg class="w-3.5 h-3.5 md:w-6 md:h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+      </svg>
+      <span class="text-[9px] md:text-base font-semibold tracking-[0.16em] whitespace-nowrap">
+        開催場所
+      </span>
+    </div>
+
+    <p class="text-white text-[9px] md:text-lg leading-[1.5] tracking-[0.04em] text-center font-medium">
+      東京都練馬区<br class="md:hidden">
+      光が丘7-14-8
+    </p>
+    <span class="text-[8px] md:text-sm text-white/60 tracking-wider">
+      駐車場完備
+    </span>
+  </div>
+
+</div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="mt-8 flex flex-col items-center space-y-2 select-none pointer-events-none">
+                <span class="text-[10px] tracking-[0.35em] text-white/50 font-light">SCROLL</span>
+                <!-- Vertical Animating Line -->
+                <div class="w-[1px] h-12 bg-gradient-to-b from-white/70 to-transparent relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1/2 bg-white/90 animate-scroll-line"></div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Wedge Divider (Navy to Beige transition) -->
+    <div class="relative z-20 -mt-1 w-full h-12 bg-brand-darkBlue">
+        <!-- SVG wedge pointing downwards -->
+        <svg class="absolute top-0 left-0 w-full h-12 text-[#f7f5f0] fill-current" viewBox="0 0 1440 48" preserveAspectRatio="none">
+            <path d="M0 0 L720 36 L1440 0 L1440 48 L0 48 Z"></path>
+        </svg>
+        <!-- Gold thin wedge line -->
+        <svg class="absolute top-0 left-0 w-full h-12 text-brand-gold/80 stroke-current" viewBox="0 0 1440 48" fill="none" stroke-width="2.5" preserveAspectRatio="none">
+            <path d="M0 0 L720 36 L1440 0"></path>
+        </svg>
+    </div>
+
+    <!-- Section 2: Empathy / Concerns (お悩み提示セクション) -->
+    <section class="relative bg-[#f7f5f0] text-brand-darkBlue py-16 md:py-24 overflow-hidden z-10">
+        
+        <!-- Blurred interior background graphic -->
+        <div class="absolute right-0 bottom-0 w-full md:w-[45%] h-full opacity-[0.08] md:opacity-[0.18] pointer-events-none select-none z-0">
+            <img src="./interior_blur.png" alt="インテリア背景" class="w-full h-full object-cover object-right-bottom">
+            <!-- Fade-out masks to blend with background color -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#f7f5f0] via-[#f7f5f0]/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#f7f5f0] via-transparent to-[#f7f5f0]"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 flex flex-col items-center">
+            
+            <!-- Heading -->
+            <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                <h2 class="font-serif text-3xl sm:text-4xl font-medium tracking-[0.18em] leading-normal text-brand-darkBlue">
+                    こんな<span class="text-brand-gold">お悩み</span>ありませんか？
+                </h2>
+                <p class="mt-4 font-sans text-sm sm:text-base text-brand-darkBlue/75 font-light tracking-[0.15em] leading-relaxed">
+                    家づくりを考え始めた方の多くが、<br class="sm:hidden">このようなお悩みや不安を感じています。
+                </p>
+            </div>
+
+            <!-- Concerns Card Grid -->
+            <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
+                
+                <!-- Card 1: Floor Plan -->
+                <div class="bg-white border border-brand-darkBlue/5 shadow-md shadow-brand-darkBlue/2 p-8 flex flex-col items-center text-center rounded-sm transition-all duration-500 hover:shadow-xl hover:shadow-brand-darkBlue/5 hover:-translate-y-1 group">
+                    <div class="text-brand-darkBlue/80 group-hover:scale-105 transition-transform duration-500">
+                        <!-- Custom Floor Plan SVG -->
+                        <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="12" y="10" width="40" height="44" />
+                            <path d="M12 28 h26 M38 10 v24 M38 34 h14 M26 28 v16 M26 44 h12 M38 44 v10" />
+                            <rect x="29" y="32" width="6" height="8" fill="#C79F5E" fill-opacity="0.15" stroke="#C79F5E" stroke-width="1.25" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 font-serif text-base sm:text-lg font-bold tracking-[0.12em] text-brand-darkBlue leading-normal">
+                        間取り図だけでは<br>イメージが湧かない
+                    </h3><br>
+                    <div class="w-20 h-[1px] bg-brand-gold my-4.5 opacity-80"></div>
+                    <p class="text-xs sm:text-sm text-brand-darkBlue/70 font-light tracking-wider leading-relaxed">
+                        <br>実際の広さや動線を<br>確認したい
+                    </p>
+                </div>
+
+                <!-- Card 2: Family -->
+                <div class="bg-white border border-brand-darkBlue/5 shadow-md shadow-brand-darkBlue/2 p-8 flex flex-col items-center text-center rounded-sm transition-all duration-500 hover:shadow-xl hover:shadow-brand-darkBlue/5 hover:-translate-y-1 group">
+                    <div class="text-brand-darkBlue/80 group-hover:scale-105 transition-transform duration-500">
+                        <!-- Custom Family SVG -->
+                        <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="21" cy="22" r="4.5" />
+                            <path d="M15 34v-3.5a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3.5" />
+                            <path d="M18 34v12" />
+                            <path d="M24 34v12" />
+                            <circle cx="43" cy="24" r="4" />
+                            <path d="M38 34v-3a3.5 3.5 0 0 1 3.5-3.5h3a3.5 3.5 0 0 1 3.5 3.5v3" />
+                            <path d="M40 34v10" />
+                            <path d="M46 34v10" />
+                            <circle cx="32" cy="31" r="3" />
+                            <path d="M28.5 39v-2.5a2.5 2.5 0 0 1 2.5-2.5h2a2.5 2.5 0 0 1 2.5 2.5v3" />
+                            <path d="M30 39v6" />
+                            <path d="M34 39v6" />
+                            <path d="M26.5 31.5l1.5 1 M37.5 33l-1.5 1" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 font-serif text-base sm:text-lg font-bold tracking-[0.12em] text-brand-darkBlue leading-normal">
+                        家族が快適に暮らせる<br>家を探している
+                    </h3><br>
+                    <div class="w-20 h-[1px] bg-brand-gold my-4.5 opacity-80"></div>
+                    <p class="text-xs sm:text-sm text-brand-darkBlue/70 font-light tracking-wider leading-relaxed">
+                        <br>子育てしやすい住環境を<br>重視したい
+                    </p>
+                </div>
+
+                <!-- Card 3: Loan -->
+                <div class="bg-white border border-brand-darkBlue/5 shadow-md shadow-brand-darkBlue/2 p-8 flex flex-col items-center text-center rounded-sm transition-all duration-500 hover:shadow-xl hover:shadow-brand-darkBlue/5 hover:-translate-y-1 group">
+                    <div class="text-brand-darkBlue/80 group-hover:scale-105 transition-transform duration-500">
+                        <!-- Custom Calculator SVG with Gold Yen Coin -->
+                        <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="18" y="10" width="28" height="42" rx="1.5" />
+                            <rect x="22" y="14" width="20" height="8" rx="0.5" />
+                            <line x1="26" y1="18" x2="38" y2="18" stroke-width="1" />
+                            
+                            <rect x="22" y="26" width="3" height="3" rx="0.5" />
+                            <rect x="27" y="26" width="3" height="3" rx="0.5" />
+                            <rect x="32" y="26" width="3" height="3" rx="0.5" />
+                            <rect x="37" y="26" width="3" height="3" rx="0.5" />
+                            
+                            <rect x="22" y="31" width="3" height="3" rx="0.5" />
+                            <rect x="27" y="31" width="3" height="3" rx="0.5" />
+                            <rect x="32" y="31" width="3" height="3" rx="0.5" />
+                            <rect x="37" y="31" width="3" height="3" rx="0.5" />
+                            
+                            <rect x="22" y="36" width="3" height="3" rx="0.5" />
+                            <rect x="27" y="36" width="3" height="3" rx="0.5" />
+                            <rect x="32" y="36" width="8" height="3" rx="0.5" fill="currentColor" fill-opacity="0.1" />
+                            
+                            <!-- Gold Coin -->
+                            <circle cx="43" cy="41" r="8" fill="#C79F5E" stroke="#C79F5E" stroke-width="1" />
+                            <!-- Yen character in vector path inside gold coin -->
+                            <path d="M40.5 38l2.5 2.5 2.5-2.5 M43 40v4 M41.5 41.5h3 M41.5 43h3" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 font-serif text-base sm:text-lg font-bold tracking-[0.12em] text-brand-darkBlue leading-normal">
+                        住宅ローンに<br>不安がある
+                    </h3><br>
+                    <div class="w-20 h-[1px] bg-brand-gold my-4.5 opacity-80"></div>
+                    <p class="text-xs sm:text-sm text-brand-darkBlue/70 font-light tracking-wider leading-relaxed">
+                        <br>無理のない資金計画を<br>相談したい
+                    </p>
+                </div>
+
+                <!-- Card 4: Flow -->
+                <div class="bg-white border border-brand-darkBlue/5 shadow-md shadow-brand-darkBlue/2 p-8 flex flex-col items-center text-center rounded-sm transition-all duration-500 hover:shadow-xl hover:shadow-brand-darkBlue/5 hover:-translate-y-1 group">
+                    <div class="text-brand-darkBlue/80 group-hover:scale-105 transition-transform duration-500">
+                        <!-- Custom Flow SVG -->
+                        <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Pendant Light -->
+                            <path d="M16 10v6 M12 18h8 M11 20a5 5 0 0 0 10 0z" />
+                            <!-- Sink -->
+                            <rect x="9" y="38" width="14" height="12" rx="0.5" />
+                            <path d="M12 38v-3a1.5 1.5 0 0 1 1.5-1.5h1v1.5" />
+                            <rect x="12" y="40" width="8" height="3" rx="0.5" />
+                            <!-- Washing Machine -->
+                            <rect x="38" y="34" width="16" height="16" rx="0.5" />
+                            <circle cx="46" cy="43" r="4.5" />
+                            <circle cx="42" cy="37" r="0.75" />
+                            <line x1="45" y1="37" x2="50" y2="37" />
+                            <!-- Flows -->
+                            <path d="M16 26v6" stroke-dasharray="2 2" />
+                            <polyline points="14 30 16 32 18 30" />
+                            <path d="M26 44h8" stroke-dasharray="2 2" />
+                            <polyline points="32 42 34 44 32 46" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 font-serif text-base sm:text-lg font-bold tracking-[0.12em] text-brand-darkBlue leading-normal">
+                        生活動線を<br>体感してみたい
+                    </h3><br>
+                    <div class="w-20 h-[1px] bg-brand-gold my-4.5 opacity-80"></div>
+                    <p class="text-xs sm:text-sm text-brand-darkBlue/70 font-light tracking-wider leading-relaxed">
+                        <br>家事や収納の使いやすさを<br>確認したい
+                    </p>
+                </div>
+
+                <!-- Card 5: Storage -->
+                <div class="bg-white border border-brand-darkBlue/5 shadow-md shadow-brand-darkBlue/2 p-8 flex flex-col items-center text-center rounded-sm transition-all duration-500 hover:shadow-xl hover:shadow-brand-darkBlue/5 hover:-translate-y-1 group">
+                    <div class="text-brand-darkBlue/80 group-hover:scale-105 transition-transform duration-500">
+                        <!-- Custom Storage SVG -->
+                        <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Wardrobe -->
+                            <rect x="10" y="20" width="12" height="30" rx="0.5" />
+                            <line x1="16" y1="20" x2="16" y2="50" />
+                            <circle cx="14" cy="35" r="0.5" fill="currentColor" />
+                            <circle cx="18" cy="35" r="0.5" fill="currentColor" />
+                            <!-- Plus 1 -->
+                            <path d="M25 35h4 M27 33v4" />
+                            <!-- Shelf -->
+                            <rect x="31" y="25" width="12" height="25" rx="0.5" />
+                            <line x1="31" y1="33" x2="43" y2="33" />
+                            <line x1="31" y1="41" x2="43" y2="41" />
+                            <rect x="33" y="29" width="3" height="4" />
+                            <rect x="37" y="29" width="4" height="4" />
+                            <!-- Plus 2 -->
+                            <path d="M46 35h4 M48 33v4" />
+                            <!-- Potted plant -->
+                            <path d="M52 44h6l-1 6H53z" />
+                            <path d="M55 44v-9 M55 39c0-1.5-2-1.5-2-3s2-1.5 2-1.5 M55 41c0-1 2-1 2-2.5s-2-1-2-1" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 font-serif text-base sm:text-lg font-bold tracking-[0.12em] text-brand-darkBlue leading-normal">
+                        収納や間取りの工夫を<br>知りたい
+                    </h3><br>
+                    <div class="w-20 h-[1px] bg-brand-gold my-4.5 opacity-80"></div>
+                    <p class="text-xs sm:text-sm text-brand-darkBlue/70 font-light tracking-wider leading-relaxed">
+                        <br>限られたスペースを有効に<br>活用したい
+                    </p>
+                </div>
+
+                <!-- Card 6: Neighborhood -->
+                <div class="bg-white border border-brand-darkBlue/5 shadow-md shadow-brand-darkBlue/2 p-8 flex flex-col items-center text-center rounded-sm transition-all duration-500 hover:shadow-xl hover:shadow-brand-darkBlue/5 hover:-translate-y-1 group">
+                    <div class="text-brand-darkBlue/80 group-hover:scale-105 transition-transform duration-500">
+                        <!-- Custom Town SVG -->
+                        <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 44h8 M10 44V34l3-3 3 3v10" />
+                            <rect x="12" y="37" width="2" height="2" />
+                            <path d="M16 44h15 M18 44V32l5-4 5 4v12" />
+                            <path d="M28 28v-5h3v2h-3" />
+                            <circle cx="23" cy="36" r="1.5" />
+                            <rect x="38" y="20" width="16" height="24" rx="0.5" />
+                            <rect x="41" y="23" width="2" height="2" />
+                            <rect x="45" y="23" width="2" height="2" />
+                            <rect x="49" y="23" width="2" height="2" />
+                            <rect x="41" y="28" width="2" height="2" />
+                            <rect x="45" y="28" width="2" height="2" />
+                            <rect x="49" y="28" width="2" height="2" />
+                            <rect x="41" y="33" width="2" height="2" />
+                            <rect x="45" y="33" width="2" height="2" />
+                            <rect x="49" y="33" width="2" height="2" />
+                            <line x1="6" y1="44" x2="58" y2="44" stroke-width="1.25" />
+                            <path d="M6 44v-3a1.5 1.5 0 0 1 1.5-1.5h0a1.5 1.5 0 0 1 1.5 1.5v3" />
+                            <path d="M33 44v-5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v5" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 font-serif text-base sm:text-lg font-bold tracking-[0.12em] text-brand-darkBlue leading-normal">
+                        周辺環境も合わせて<br>見学したい
+                    </h3><br>
+                    <div class="w-20 h-[1px] bg-brand-gold my-4.5 opacity-80"></div>
+                    <p class="text-xs sm:text-sm text-brand-darkBlue/70 font-light tracking-wider leading-relaxed">
+                        <br>駅や学校、買い物施設も<br>気になる
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Footer Message -->
+            <div class="text-center max-w-2xl mx-auto">
+                <h3 class="font-serif text-xl sm:text-2xl font-medium tracking-[0.18em] leading-normal text-brand-darkBlue">
+                    ひとつでも<span class="text-brand-gold">当てはまる方へ</span>
+                </h3>
+                <p class="mt-4 font-sans text-sm sm:text-base text-brand-darkBlue/75 font-light tracking-[0.15em] leading-loose">
+                    実際の住まいを見学することで、<br>理想の暮らしがより具体的になります。
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Wedge Divider (Beige to Navy transition) -->
+    <div class="relative z-20 -mt-1 w-full h-12 bg-[#f7f5f0]">
+        <!-- SVG wedge pointing downwards (navy color) -->
+        <svg class="absolute top-0 left-0 w-full h-12 text-[#051122] fill-current" viewBox="0 0 1440 48" preserveAspectRatio="none">
+            <path d="M0 0 L720 36 L1440 0 L1440 48 L0 48 Z"></path>
+        </svg>
+        <!-- Gold thin wedge line -->
+        <svg class="absolute top-0 left-0 w-full h-12 text-brand-gold/80 stroke-current" viewBox="0 0 1440 48" fill="none" stroke-width="2.5" preserveAspectRatio="none">
+            <path d="M0 0 L720 36 L1440 0"></path>
+        </svg>
+    </div>
+
+    <!-- Section 3: Benefit (理想を叶える家) -->
+    <section class="relative bg-brand-darkBlue text-white py-16 md:py-24 overflow-hidden z-10">
+        
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 flex flex-col items-center">
+            
+            <!-- Heading -->
+            <div class="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+                <h2 class="font-serif text-3xl sm:text-4xl font-medium tracking-[0.18em] leading-normal text-white">
+                    理想を<span class="text-brand-gold">叶える家</span>
+                </h2>
+                <p class="mt-4 font-sans text-sm sm:text-base text-white/80 font-light tracking-[0.15em] leading-relaxed">
+                    見るだけで終わらない、<br class="sm:hidden">「住んだ後」が想像できる家
+                </p>
+            </div>
+
+            <!-- Benefit Rows Stack -->
+            <div class="w-full flex flex-col space-y-16 md:space-y-20 max-w-5xl">
+                
+                <!-- Row 1: LDK -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 group">
+                    <!-- Image -->
+                    <div class="w-full md:w-1/2 overflow-hidden rounded-sm border border-white/10 shadow-xl group-hover:border-brand-gold/40 transition-all duration-500">
+                        <img src="./benefit_ldk.png" alt="開放感あふれるLDK" class="w-full h-[240px] sm:h-[300px] md:h-[320px] object-cover transition-transform duration-700 group-hover:scale-[1.02]">
+                    </div>
+                    <!-- Text content -->
+                    <div class="w-full md:w-1/2 flex flex-col justify-center text-left">
+                        <div class="flex items-center space-x-4 text-brand-gold mb-3">
+                            <span class="font-serif text-3xl md:text-4xl font-light tracking-widest">01</span>
+                            <div class="h-[1px] w-12 bg-brand-gold transform origin-left transition-transform duration-500 group-hover:scale-x-150"></div>
+                        </div>
+                        <h3 class="font-serif text-xl sm:text-2xl font-medium tracking-[0.12em] text-white leading-normal">
+                            開放感あふれるLDK
+                        </h3>
+                        <p class="font-sans text-sm sm:text-base font-normal tracking-[0.1em] text-brand-gold mt-1.5">
+                            家族が自然と集まる設計
+                        </p>
+                        <p class="text-xs sm:text-sm text-white/70 font-light tracking-wide leading-loose mt-4">
+                            大きな窓から光が差し込む、開放的なリビングダイニング。<br class="hidden sm:inline">
+                            家族の会話が自然と生まれる、心地よい空間です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Row 2: Laundry Flow -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 group">
+                    <!-- Image -->
+                    <div class="w-full md:w-1/2 h-[240px] sm:h-[300px] md:h-[320px] overflow-hidden rounded-sm border border-white/10 shadow-xl group-hover:border-brand-gold/40 transition-all duration-500 relative">
+                        <img src="./benefit_flow.png" alt="家事ラク動線" class="absolute inset-0 w-[108%] h-full max-w-none object-cover object-left transition-transform duration-700 group-hover:scale-[1.02]">
+                    </div>
+                    <!-- Text content -->
+                    <div class="w-full md:w-1/2 flex flex-col justify-center text-left">
+                        <div class="flex items-center space-x-4 text-brand-gold mb-3">
+                            <span class="font-serif text-3xl md:text-4xl font-light tracking-widest">02</span>
+                            <div class="h-[1px] w-12 bg-brand-gold transform origin-left transition-transform duration-500 group-hover:scale-x-150"></div>
+                        </div>
+                        <h3 class="font-serif text-xl sm:text-2xl font-medium tracking-[0.12em] text-white leading-normal">
+                            家事ラク動線
+                        </h3>
+                        <p class="font-sans text-sm sm:text-base font-normal tracking-[0.1em] text-brand-gold mt-1.5">
+                            洗濯・収納・キッチンを最短距離に
+                        </p>
+                        <p class="text-xs sm:text-sm text-white/70 font-light tracking-wide leading-loose mt-4">
+                            毎日の家事をスムーズにする動線設計。<br class="hidden sm:inline">
+                            移動距離を減らし、時間にも心にもゆとりが生まれます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Row 3: Storage -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 group">
+                    <!-- Image -->
+                    <div class="w-full md:w-1/2 overflow-hidden rounded-sm border border-white/10 shadow-xl group-hover:border-brand-gold/40 transition-all duration-500">
+                        <img src="./benefit_storage.png" alt="豊富な収納" class="w-full h-[240px] sm:h-[300px] md:h-[320px] object-cover transition-transform duration-700 group-hover:scale-[1.02]">
+                    </div>
+                    <!-- Text content -->
+                    <div class="w-full md:w-1/2 flex flex-col justify-center text-left">
+                        <div class="flex items-center space-x-4 text-brand-gold mb-3">
+                            <span class="font-serif text-3xl md:text-4xl font-light tracking-widest">03</span>
+                            <div class="h-[1px] w-12 bg-brand-gold transform origin-left transition-transform duration-500 group-hover:scale-x-150"></div>
+                        </div>
+                        <h3 class="font-serif text-xl sm:text-2xl font-medium tracking-[0.12em] text-white leading-normal">
+                            豊富な収納
+                        </h3>
+                        <p class="font-sans text-sm sm:text-base font-normal tracking-[0.1em] text-brand-gold mt-1.5">
+                            生活感を隠してスッキリ暮らせる
+                        </p>
+                        <p class="text-xs sm:text-sm text-white/70 font-light tracking-wide leading-loose mt-4">
+                            必要な場所に必要な収納を配置。<br class="hidden sm:inline">
+                            片付けやすく、いつでもスッキリとした美しい空間を保てます。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Divider Line -->
+        <div class="absolute bottom-0 left-0 w-full h-[1px] bg-brand-gold"></div>
+    </section>
+
+
+
+    <!-- Interactive Booking Modal (Glassmorphism design) -->
+    <div id="bookingModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-darkBlue/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-500">
+        
+        <!-- Modal Card -->
+        <div class="relative w-full max-w-lg bg-[#0c1a2f]/95 border border-white/10 rounded-sm shadow-2xl p-6 sm:p-8 transform scale-95 transition-all duration-500 overflow-y-auto max-h-[90vh]">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-white/60 hover:text-white transition-colors duration-300">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <!-- Form State: Active -->
+            <div id="formContainer">
+                <div class="text-center mb-6">
+                    <h2 class="font-serif text-2xl font-medium tracking-wider text-brand-gold">来場予約フォーム</h2>
+                    <p class="text-xs text-white/60 mt-2 tracking-widest">ご希望の日時と必要事項をご入力ください。</p>
+                </div>
+
+                <form id="reservationForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                    <!-- Name -->
+                    <div>
+                        <label class="block text-xs font-medium tracking-widest text-brand-gold mb-1.5">お名前 <span class="text-red-400">*</span></label>
+                        <input type="text" required class="w-full bg-[#051122]/60 border border-white/10 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-sm px-4 py-2.5 text-sm text-white placeholder-white/30 outline-none transition-all duration-300" placeholder="山田 太郎">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-xs font-medium tracking-widest text-brand-gold mb-1.5">メールアドレス <span class="text-red-400">*</span></label>
+                        <input type="email" required class="w-full bg-[#051122]/60 border border-white/10 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-sm px-4 py-2.5 text-sm text-white placeholder-white/30 outline-none transition-all duration-300" placeholder="example@domain.com">
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label class="block text-xs font-medium tracking-widest text-brand-gold mb-1.5">電話番号 <span class="text-red-400">*</span></label>
+                        <input type="tel" required class="w-full bg-[#051122]/60 border border-white/10 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-sm px-4 py-2.5 text-sm text-white placeholder-white/30 outline-none transition-all duration-300" placeholder="090-0000-0000">
+                    </div>
+
+                    <!-- Preferred Date & Time Slot Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Preferred Date -->
+                        <div>
+                            <label class="block text-xs font-medium tracking-widest text-brand-gold mb-1.5">ご希望の日程 <span class="text-red-400">*</span></label>
+                            <select required class="w-full bg-[#051122]/60 border border-white/10 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-sm px-4 py-2.5 text-sm text-white outline-none transition-all duration-300">
+                                <option value="" class="bg-[#051122]">選択してください</option>
+                                <option value="6/15" class="bg-[#051122]">6/15 (土)</option>
+                                <option value="6/16" class="bg-[#051122]">6/16 (日)</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Preferred Time Slot -->
+                        <div>
+                            <label class="block text-xs font-medium tracking-widest text-brand-gold mb-1.5">ご希望の時間帯 <span class="text-red-400">*</span></label>
+                            <select required class="w-full bg-[#051122]/60 border border-white/10 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold rounded-sm px-4 py-2.5 text-sm text-white outline-none transition-all duration-300">
+                                <option value="" class="bg-[#051122]">選択してください</option>
+                                <option value="10:00-12:00" class="bg-[#051122]">10:00 - 12:00</option>
+                                <option value="12:00-14:00" class="bg-[#051122]">12:00 - 14:00</option>
+                                <option value="14:00-16:00" class="bg-[#051122]">14:00 - 16:00</option>
+                                <option value="16:00-17:00" class="bg-[#051122]">16:00 - 17:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-2">
+                        <button type="submit" class="w-full flex items-center justify-center space-x-2 bg-brand-gold hover:bg-brand-goldHover active:scale-[0.98] text-white py-3.5 rounded-sm text-sm sm:text-base font-medium tracking-widest shadow-lg transition-all duration-300 hover:shadow-brand-gold/25">
+                            <span>この内容で予約を送信する</span>
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Form State: Success (Hidden by default) -->
+            <div id="successContainer" class="hidden text-center py-8 flex flex-col items-center">
+                <!-- Checkmark Icon inside gold circle -->
+                <div class="w-16 h-16 rounded-full bg-brand-gold/10 border border-brand-gold flex items-center justify-center text-brand-gold mb-6 animate-pulse">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h3 class="font-serif text-xl sm:text-2xl font-medium tracking-wider text-brand-gold mb-4">ご予約を受け付けました</h3>
+                <p class="text-xs sm:text-sm text-white/70 leading-loose max-w-sm tracking-widest">
+                    ご入力いただいたメールアドレス宛に、自動返信の予約確認メールをお送りしました。<br>
+                    万が一メールが届かない場合は、お手数ですがお問い合わせください。
+                </p>
+                <button onclick="closeModal()" class="mt-8 border border-white/20 hover:border-white text-white/80 hover:text-white px-6 py-2.5 rounded-sm text-xs tracking-widest transition-all duration-300">
+                    閉じる
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal Interactivity -->
+    <script>
+        const bookingModal = document.getElementById('bookingModal');
+        const formContainer = document.getElementById('formContainer');
+        const successContainer = document.getElementById('successContainer');
+        const reservationForm = document.getElementById('reservationForm');
+
+        function openModal() {
+            bookingModal.classList.remove('opacity-0', 'pointer-events-none');
+            bookingModal.querySelector('.transform').classList.remove('scale-95');
+            bookingModal.querySelector('.transform').classList.add('scale-100');
+            document.body.style.overflow = 'hidden'; // Lock background scrolling
+        }
+
+        function closeModal() {
+            bookingModal.classList.add('opacity-0', 'pointer-events-none');
+            bookingModal.querySelector('.transform').classList.remove('scale-100');
+            bookingModal.querySelector('.transform').classList.add('scale-95');
+            document.body.style.overflow = ''; // Restore background scrolling
+            
+            // Reset modal state after fade transition finishes
+            setTimeout(() => {
+                formContainer.classList.remove('hidden');
+                successContainer.classList.add('hidden');
+                reservationForm.reset();
+            }, 500);
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Mock reservation submission (Show loading state then success state)
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>送信中...</span>
+            `;
+
+            setTimeout(() => {
+                // Show Success Screen
+                formContainer.classList.add('hidden');
+                successContainer.classList.remove('hidden');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }, 1000);
+        }
+
+        // Close modal when clicking outside the card
+        bookingModal.addEventListener('click', (event) => {
+            if (event.target === bookingModal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery Section | HIKARI HOME</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#C79F5E',
+              goldHover: '#B38D4F',
+              darkBlue: '#051122',
+              ivory: '#f7f5f0'
+            }
+          },
+          fontFamily: {
+            serif: ['Noto Serif JP', 'serif'],
+            sans: ['Noto Sans JP', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: "Noto Sans JP", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background: #f7f5f0;
+    }
+
+    .gallery-main-card {
+      box-shadow: 0 12px 30px rgba(5, 17, 34, 0.12);
+    }
+
+    .gallery-control {
+      box-shadow: 0 8px 20px rgba(5, 17, 34, 0.16);
+      transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .gallery-control:hover {
+      box-shadow: 0 12px 24px rgba(5, 17, 34, 0.2);
+      background: #fff7ec;
+    }
+
+    .gallery-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 9999px;
+      border: 1px solid rgba(199, 159, 94, 0.8);
+      background: transparent;
+      transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .gallery-dot[aria-current="true"] {
+      background: #C79F5E;
+      border-color: #C79F5E;
+      transform: scale(1.08);
+    }
+
+    .gallery-thumb-card {
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .gallery-thumb:hover .gallery-thumb-card {
+      transform: translateY(-1px);
+    }
+
+    .gallery-thumb[aria-current="true"] .gallery-thumb-card {
+      border-color: #C79F5E;
+      box-shadow: 0 0 0 1px rgba(199, 159, 94, 0.15);
+    }
+
+    .gallery-thumb[aria-current="true"] .gallery-thumb-label {
+      color: #C79F5E;
+    }
+
+    @media (max-width: 374px) {
+      #galleryThumbs {
+        gap: 0.25rem;
+      }
+
+      .gallery-thumb-label {
+        font-size: 9px;
+        line-height: 1.2;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-control,
+      .gallery-dot,
+      .gallery-thumb-card,
+      #galleryMainImage {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 前セクションのネイビー帯を想定した上部デザイン -->
+  <div class="relative z-20 w-full h-12 bg-brand-darkBlue">
+    <svg class="absolute top-0 left-0 w-full h-12 text-brand-ivory fill-current" viewBox="0 0 1440 48" preserveAspectRatio="none">
+      <path d="M0 0 L720 36 L1440 0 L1440 48 L0 48 Z"></path>
+    </svg>
+    <svg class="absolute top-0 left-0 w-full h-12 text-brand-gold/90 stroke-current" viewBox="0 0 1440 48" fill="none" stroke-width="2.5" preserveAspectRatio="none">
+      <path d="M0 0 L720 36 L1440 0"></path>
+    </svg>
+  </div>
+
+  <!-- Section: Gallery -->
+  <section id="gallery" class="relative bg-brand-ivory pt-8 pb-10 md:pt-12 md:pb-16">
+    <div class="mx-auto w-full max-w-[393px] px-5 sm:max-w-[680px] sm:px-6 md:max-w-[760px]">
+      <div
+        id="lpGallery"
+        role="region"
+        aria-roledescription="carousel"
+        aria-labelledby="galleryHeading"
+        class="text-brand-darkBlue"
+      >
+        <!-- Heading -->
+        <div class="text-center">
+          <div class="flex items-center justify-center gap-3">
+            <span class="h-px w-10 bg-brand-gold/45"></span>
+            <p class="font-serif text-[13px] tracking-[0.18em] text-brand-gold sm:text-[15px]">
+              GALLERY
+            </p>
+            <span class="h-px w-10 bg-brand-gold/45"></span>
+          </div>
+
+          <h2
+            id="galleryHeading"
+            class="mt-3 font-serif text-[24px] leading-[1.45] tracking-[0.08em] text-brand-darkBlue sm:text-[32px]"
+          >
+            暮らしを彩る空間
+          </h2>
+
+          <p class="mt-2 text-[12px] leading-[1.9] tracking-[0.04em] text-brand-darkBlue/75 sm:text-sm">
+            実際の空間を写真でご覧ください。
+          </p>
+        </div>
+
+        <!-- Gallery body -->
+        <div class="mt-6 sm:mt-8">
+          <div class="relative">
+            <figure
+              id="galleryStage"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="1 / 6：外観"
+              class="gallery-main-card overflow-hidden rounded-[6px] bg-white ring-1 ring-black/5"
+            >
+              <div class="aspect-[16/10] bg-brand-darkBlue/5">
+                <img
+                  id="galleryMainImage"
+                  class="h-full w-full object-cover transition-opacity duration-300"
+                  src="./gallery_exterior.png"
+                  alt="外観。上質なデザインが街並みに映える外観"
+                  width="1200"
+                  height="750"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </figure>
+
+            <button
+              id="galleryPrev"
+              type="button"
+              aria-label="前の写真を表示"
+              class="gallery-control absolute left-[-12px] top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-brand-darkBlue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory sm:left-[-16px] sm:h-10 sm:w-10"
+            >
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+
+            <button
+              id="galleryNext"
+              type="button"
+              aria-label="次の写真を表示"
+              class="gallery-control absolute right-[-12px] top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-brand-darkBlue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory sm:right-[-16px] sm:h-10 sm:w-10"
+            >
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="px-2 pt-4 text-center sm:pt-5">
+            <h3
+              id="galleryMainTitle"
+              class="font-serif text-[18px] leading-none tracking-[0.08em] text-brand-darkBlue sm:text-[24px]"
+            >
+              外観
+            </h3>
+
+            <p
+              id="galleryMainSubtitle"
+              class="mt-3 text-[12px] leading-[1.8] tracking-[0.02em] text-brand-darkBlue/85 sm:text-sm"
+            >
+              上質なデザインが街並みに映える外観
+            </p>
+          </div>
+
+          <div
+            id="galleryDots"
+            role="group"
+            aria-label="表示する写真を選択"
+            class="mt-7 flex items-center justify-center gap-4 sm:mt-8"
+          >
+            <button type="button" class="gallery-dot focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="0" aria-label="外観を表示" aria-current="true" aria-disabled="true" aria-controls="galleryStage"></button>
+            <button type="button" class="gallery-dot focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="1" aria-label="LDKを表示" aria-current="false" aria-disabled="false" aria-controls="galleryStage"></button>
+            <button type="button" class="gallery-dot focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="2" aria-label="キッチンを表示" aria-current="false" aria-disabled="false" aria-controls="galleryStage"></button>
+            <button type="button" class="gallery-dot focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="3" aria-label="洗面所を表示" aria-current="false" aria-disabled="false" aria-controls="galleryStage"></button>
+            <button type="button" class="gallery-dot focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="4" aria-label="主寝室を表示" aria-current="false" aria-disabled="false" aria-controls="galleryStage"></button>
+            <button type="button" class="gallery-dot focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="5" aria-label="子供部屋を表示" aria-current="false" aria-disabled="false" aria-controls="galleryStage"></button>
+          </div>
+
+          <div
+            id="galleryThumbs"
+            role="group"
+            aria-label="サムネイルから写真を選択"
+            class="mt-8 grid grid-cols-6 gap-1.5 sm:mt-9 sm:gap-2"
+          >
+            <button type="button" class="gallery-thumb group flex flex-col items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="0" aria-current="true" aria-disabled="true" aria-controls="galleryStage">
+              <span class="gallery-thumb-card block w-full overflow-hidden rounded-[6px] border-2 border-transparent bg-white">
+                <img src="./gallery_exterior.png" alt="" width="160" height="120" loading="lazy" decoding="async" class="block aspect-[4/3] h-auto w-full object-cover" />
+              </span>
+              <span class="gallery-thumb-label block text-center text-[10px] leading-4 tracking-[0.02em] text-brand-darkBlue/72 sm:text-[11px]">外観</span>
+            </button>
+
+            <button type="button" class="gallery-thumb group flex flex-col items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="1" aria-current="false" aria-disabled="false" aria-controls="galleryStage">
+              <span class="gallery-thumb-card block w-full overflow-hidden rounded-[6px] border-2 border-transparent bg-white">
+                <img src="./gallery_ldk.png" alt="" width="160" height="120" loading="lazy" decoding="async" class="block aspect-[4/3] h-auto w-full object-cover" />
+              </span>
+              <span class="gallery-thumb-label block text-center text-[10px] leading-4 tracking-[0.02em] text-brand-darkBlue/72 sm:text-[11px]">LDK</span>
+            </button>
+
+            <button type="button" class="gallery-thumb group flex flex-col items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="2" aria-current="false" aria-disabled="false" aria-controls="galleryStage">
+              <span class="gallery-thumb-card block w-full overflow-hidden rounded-[6px] border-2 border-transparent bg-white">
+                <img src="./gallery_kitchen.jpg" alt="" width="160" height="120" loading="lazy" decoding="async" class="block aspect-[4/3] h-auto w-full object-cover" />
+              </span>
+              <span class="gallery-thumb-label block text-center text-[10px] leading-4 tracking-[0.02em] text-brand-darkBlue/72 sm:text-[11px]">キッチン</span>
+            </button>
+
+            <button type="button" class="gallery-thumb group flex flex-col items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="3" aria-current="false" aria-disabled="false" aria-controls="galleryStage">
+              <span class="gallery-thumb-card block w-full overflow-hidden rounded-[6px] border-2 border-transparent bg-white">
+                <img src="./gallery_washroom.jpg" alt="" width="160" height="120" loading="lazy" decoding="async" class="block aspect-[4/3] h-auto w-full object-cover" />
+              </span>
+              <span class="gallery-thumb-label block text-center text-[10px] leading-4 tracking-[0.02em] text-brand-darkBlue/72 sm:text-[11px]">洗面所</span>
+            </button>
+
+            <button type="button" class="gallery-thumb group flex flex-col items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="4" aria-current="false" aria-disabled="false" aria-controls="galleryStage">
+              <span class="gallery-thumb-card block w-full overflow-hidden rounded-[6px] border-2 border-transparent bg-white">
+                <img src="./gallery_bedroom.jpg" alt="" width="160" height="120" loading="lazy" decoding="async" class="block aspect-[4/3] h-auto w-full object-cover" />
+              </span>
+              <span class="gallery-thumb-label block text-center text-[10px] leading-4 tracking-[0.02em] text-brand-darkBlue/72 sm:text-[11px]">主寝室</span>
+            </button>
+
+            <button type="button" class="gallery-thumb group flex flex-col items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory" data-index="5" aria-current="false" aria-disabled="false" aria-controls="galleryStage">
+              <span class="gallery-thumb-card block w-full overflow-hidden rounded-[6px] border-2 border-transparent bg-white">
+                <img src="./gallery_kidsroom.jpg" alt="" width="160" height="120" loading="lazy" decoding="async" class="block aspect-[4/3] h-auto w-full object-cover" />
+              </span>
+              <span class="gallery-thumb-label block text-center text-[10px] leading-4 tracking-[0.02em] text-brand-darkBlue/72 sm:text-[11px]">子供部屋</span>
+            </button>
+          </div>
+
+          <p id="galleryLiveRegion" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (() => {
+      const root = document.getElementById('lpGallery');
+      if (!root) return;
+
+      const items = [
+        {
+          title: '外観',
+          subtitle: '上質なデザインが街並みに映える外観',
+          alt: '外観。上質なデザインが街並みに映える外観',
+          image: './gallery_exterior.png'
+        },
+        {
+          title: 'LDK',
+          subtitle: '家族が自然と集まる開放的なリビングダイニング',
+          alt: 'LDK。家族が自然と集まる開放的なリビングダイニング',
+          image: './gallery_ldk.png'
+        },
+        {
+          title: 'キッチン',
+          subtitle: '美しさと使いやすさを両立した上質なキッチン',
+          alt: 'キッチン。美しさと使いやすさを両立した上質なキッチン',
+          image: './gallery_kitchen.jpg'
+        },
+        {
+          title: '洗面所',
+          subtitle: '朝の支度も心地よく整うホテルライクな洗面空間',
+          alt: '洗面所。朝の支度も心地よく整うホテルライクな洗面空間',
+          image: './gallery_washroom.jpg'
+        },
+        {
+          title: '主寝室',
+          subtitle: '落ち着きとやわらかな光に包まれるプライベート空間',
+          alt: '主寝室。落ち着きとやわらかな光に包まれるプライベート空間',
+          image: './gallery_bedroom.jpg'
+        },
+        {
+          title: '子供部屋',
+          subtitle: '成長に合わせてのびやかに使える明るい子供部屋',
+          alt: '子供部屋。成長に合わせてのびやかに使える明るい子供部屋',
+          image: './gallery_kidsroom.jpg'
+        }
+      ];
+
+      const stage = document.getElementById('galleryStage');
+      const mainImage = document.getElementById('galleryMainImage');
+      const mainTitle = document.getElementById('galleryMainTitle');
+      const mainSubtitle = document.getElementById('galleryMainSubtitle');
+      const liveRegion = document.getElementById('galleryLiveRegion');
+      const prevButton = document.getElementById('galleryPrev');
+      const nextButton = document.getElementById('galleryNext');
+      const dots = Array.from(root.querySelectorAll('#galleryDots [data-index]'));
+      const thumbs = Array.from(root.querySelectorAll('#galleryThumbs [data-index]'));
+
+      let currentIndex = 0;
+
+      function setPickerState(buttons) {
+        buttons.forEach((button, index) => {
+          const isCurrent = index === currentIndex;
+          button.setAttribute('aria-current', isCurrent ? 'true' : 'false');
+          button.setAttribute('aria-disabled', isCurrent ? 'true' : 'false');
+        });
+      }
+
+      function updateContent(announce = true) {
+        const item = items[currentIndex];
+
+        mainTitle.textContent = item.title;
+        mainSubtitle.textContent = item.subtitle;
+        stage.setAttribute('aria-label', `${currentIndex + 1} / ${items.length}：${item.title}`);
+
+        setPickerState(dots);
+        setPickerState(thumbs);
+
+        if (announce) {
+          liveRegion.textContent = `${item.title}、${item.subtitle}。${currentIndex + 1}枚目 / ${items.length}枚`;
+        }
+      }
+
+      function swapTo(index, announce = true) {
+        const nextIndex = (index + items.length) % items.length;
+        if (nextIndex === currentIndex && announce) return;
+
+        currentIndex = nextIndex;
+        const item = items[currentIndex];
+
+        mainImage.classList.add('opacity-0');
+
+        setTimeout(() => {
+          mainImage.src = item.image;
+          mainImage.alt = item.alt;
+
+          requestAnimationFrame(() => {
+            mainImage.classList.remove('opacity-0');
+          });
+
+          updateContent(announce);
+        }, 180);
+      }
+
+      prevButton.addEventListener('click', () => swapTo(currentIndex - 1, true));
+      nextButton.addEventListener('click', () => swapTo(currentIndex + 1, true));
+
+      dots.forEach((button) => {
+        button.addEventListener('click', () => swapTo(Number(button.dataset.index), true));
+      });
+
+      thumbs.forEach((button) => {
+        button.addEventListener('click', () => swapTo(Number(button.dataset.index), true));
+      });
+
+      root.addEventListener('keydown', (event) => {
+        if (!root.contains(document.activeElement)) return;
+
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          swapTo(currentIndex - 1, true);
+        }
+
+        if (event.key === 'ArrowRight') {
+          event.preventDefault();
+          swapTo(currentIndex + 1, true);
+        }
+      });
+
+      updateContent(false);
+    })();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プレゼントセクション | HIKARI HOME</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#051122',
+              gold: '#C79F5E',
+              ivory: '#F7F5F0',
+              text: '#1A1A1A'
+            }
+          },
+          fontFamily: {
+            serif: ['Noto Serif JP', 'serif'],
+            sans: ['Noto Sans JP', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", sans-serif;
+      background: #f7f5f0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .present-card {
+      background:
+        radial-gradient(circle at 92% 18%, rgba(199,159,94,.22), transparent 22%),
+        radial-gradient(circle at 12% 72%, rgba(199,159,94,.18), transparent 24%),
+        linear-gradient(180deg, #06152a 0%, #051122 100%);
+    }
+
+    .gold-text {
+      background: linear-gradient(180deg, #f8e8b7 0%, #c79f5e 42%, #9e7436 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: #f6d78b;
+      border-radius: 999px;
+      box-shadow: 0 0 10px rgba(246,215,139,.85);
+      opacity: .85;
+    }
+
+    .sparkle-lg::before,
+    .sparkle-lg::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      background: #f6d78b;
+      transform: translate(-50%, -50%);
+    }
+
+    .sparkle-lg::before {
+      width: 2px;
+      height: 22px;
+      border-radius: 999px;
+    }
+
+    .sparkle-lg::after {
+      width: 22px;
+      height: 2px;
+      border-radius: 999px;
+    }
+
+    .wave-top {
+      position: absolute;
+      inset-inline: 0;
+      top: -1px;
+      height: 74px;
+      overflow: hidden;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-ivory text-brand-text">
+
+  <!-- PRESENT SECTION -->
+  <section class="relative overflow-hidden bg-brand-ivory">
+
+    <!-- 上部：3つのメリット -->
+    <div class="mx-auto max-w-[430px] px-4 pt-8 pb-8 md:max-w-5xl md:px-8 md:pt-14">
+      <div class="text-center">
+        <h2 class="font-serif text-[24px] tracking-[0.09em] leading-snug text-brand-text md:text-4xl">
+          ご来場で得られる<br>3つのメリット
+        </h2><br>
+        <p class="mt-2 text-[10px] tracking-[0.06em] text-black/70 md:text-sm">
+          実際にご見学いただくことで、<br>理想の暮らしがより具体的にイメージできます。
+        </p>
+      </div>
+
+      <div class="mt-5 grid grid-cols-3 gap-2 md:mt-10 md:gap-6">
+        <!-- Card 1 -->
+        <article class="relative rounded-[6px] bg-white p-2 shadow-[0_3px_10px_rgba(0,0,0,.22)] md:p-5">
+          <span class="absolute -top-2 left-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand-navy font-serif text-[14px] text-white md:h-10 md:w-10 md:text-xl">01</span>
+          <h3 class="ml-7 min-h-[36px] font-serif text-[10px] font-semibold leading-[1.35] tracking-[0.02em] text-brand-navy md:ml-11 md:text-xl">
+            実際の広さを<br>体験できる
+          </h3>
+          <img src="./present_merit01.png" alt="実際の広さを体験できる" class="mt-2 aspect-[4/3] w-full rounded-[2px] object-cover">
+          <p class="mt-2 text-[7px] leading-[1.65] text-black/70 md:text-xs">
+            図面だけでは分からない空間の広がりや暮らしやすさを、実際の住まいでご体感いただけます。
+          </p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="relative rounded-[6px] bg-white p-2 shadow-[0_3px_10px_rgba(0,0,0,.22)] md:p-5">
+          <span class="absolute -top-2 left-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand-navy font-serif text-[14px] text-white md:h-10 md:w-10 md:text-xl">02</span>
+          <h3 class="ml-7 min-h-[36px] font-serif text-[10px] font-semibold leading-[1.35] tracking-[0.02em] text-brand-navy md:ml-11 md:text-xl">
+            住宅ローン<br>相談無料
+          </h3>
+          <img src="./present_merit02.png" alt="住宅ローン相談無料" class="mt-2 aspect-[4/3] w-full rounded-[2px] object-cover">
+          <p class="mt-2 text-[7px] leading-[1.65] text-black/70 md:text-xs">
+            資金計画や月々の返済額など、住宅購入に関する不安をお気軽にご相談いただけます。
+          </p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="relative rounded-[6px] bg-white p-2 shadow-[0_3px_10px_rgba(0,0,0,.22)] md:p-5">
+          <span class="absolute -top-2 left-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand-navy font-serif text-[14px] text-white md:h-10 md:w-10 md:text-xl">03</span>
+          <h3 class="ml-7 min-h-[36px] font-serif text-[10px] font-semibold leading-[1.35] tracking-[0.02em] text-brand-navy md:ml-11 md:text-xl">
+            土地探し<br>相談無料
+          </h3>
+          <img src="./present_merit03.png" alt="土地探し相談無料" class="mt-2 aspect-[4/3] w-full rounded-[2px] object-cover">
+          <p class="mt-2 text-[7px] leading-[1.65] text-black/70 md:text-xs">
+            ご希望エリアや予算に合わせて、理想の暮らしを叶える土地探しをサポートいたします。
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <!-- 下部：ご来場特典 -->
+    <div class="relative bg-brand-navy pt-16 pb-10 md:pt-24 md:pb-20">
+
+      <!-- 波形 -->
+      <div class="wave-top">
+        <svg class="h-full w-full" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,38 C260,108 470,105 720,60 C970,15 1180,12 1440,50 L1440,0 L0,0 Z" fill="#F7F5F0"></path>
+          <path d="M0,40 C260,110 470,107 720,62 C970,17 1180,14 1440,52" fill="none" stroke="#C79F5E" stroke-width="5"></path>
+        </svg>
+      </div>
+
+      <div class="mx-auto max-w-[430px] px-5 md:max-w-5xl md:px-8">
+        <div class="present-card relative overflow-hidden border border-brand-gold/80 px-4 py-7 shadow-[0_18px_45px_rgba(0,0,0,.35)] md:px-12 md:py-14">
+
+          <!-- キラキラ -->
+          <span class="sparkle sparkle-lg right-[12%] top-[14%] h-3 w-3"></span>
+          <span class="sparkle right-[8%] top-[24%]"></span>
+          <span class="sparkle right-[18%] top-[28%]"></span>
+          <span class="sparkle left-[7%] bottom-[24%]"></span>
+          <span class="sparkle left-[13%] bottom-[32%]"></span>
+
+          <!-- 枠線装飾 -->
+          <div class="pointer-events-none absolute inset-2 border border-brand-gold/70 md:inset-4"></div>
+
+          <div class="relative z-10 text-center">
+            <div class="mb-3 flex items-center justify-center gap-3 md:mb-5">
+              <span class="h-px w-12 bg-brand-gold md:w-20"></span>
+              <span class="font-serif text-[11px] tracking-[0.25em] text-brand-gold md:text-sm">PRESENT</span>
+              <span class="h-px w-12 bg-brand-gold md:w-20"></span>
+            </div>
+
+            <h2 class="font-serif text-[31px] tracking-[0.16em] text-white md:text-6xl">
+              ご来場特典
+            </h2>
+
+            <div class="mx-auto mt-4 h-px w-48 bg-gradient-to-r from-transparent via-brand-gold to-transparent md:mt-6 md:w-80"></div>
+
+            <div class="mt-5 flex items-center justify-center gap-4 md:mt-8 md:gap-10">
+              <!-- gift icon -->
+              <div class="hidden sm:block text-brand-gold">
+                <svg class="h-24 w-24 md:h-32 md:w-32" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 42h64v42H18z"/>
+                  <path d="M50 42v42"/>
+                  <path d="M12 30h76v14H12z"/>
+                  <path d="M50 30c-16-21-32-6-20 4 7 6 20-4 20-4z"/>
+                  <path d="M50 30c16-21 32-6 20 4-7 6-20-4-20-4z"/>
+                </svg>
+              </div>
+
+              <div>
+                <p class="font-serif text-[18px] tracking-[0.08em] text-white md:text-3xl">
+                  Amazonギフト券
+                </p>
+                <div class="mt-1 flex items-end justify-center gap-1">
+                  <span class="gold-text font-serif text-[70px] font-bold leading-none tracking-[0.02em] md:text-[132px]">3,000</span>
+                  <span class="pb-3 font-serif text-[20px] text-brand-gold md:pb-6 md:text-4xl">円分</span>
+                </div>
+                <p class="font-serif text-[22px] tracking-[0.12em] text-white md:text-4xl">
+                  プレゼント!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-3 text-right text-[9px] tracking-[0.05em] text-white/80 md:text-sm">
+          ご予約の上ご来場いただいた方限定の特典です。
+        </p>
+
+        <p class="mt-7 text-center text-[13px] tracking-[0.18em] text-white md:text-lg">
+          ＼ まずはお気軽にご予約ください ／
+        </p>
+
+        <div class="mt-4 text-center">
+          <button onclick="openModal()" class="group inline-flex w-[310px] max-w-full items-center justify-center gap-4 rounded-full bg-brand-gold px-7 py-4 text-white shadow-[0_10px_24px_rgba(0,0,0,.3)] transition duration-300 hover:bg-[#b58d4f] hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(0,0,0,.38)] md:w-[460px] md:py-5">
+  <svg class="h-5 w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="3" y="4" width="18" height="18" rx="2"/>
+    <path d="M16 2v4M8 2v4M3 10h18"/>
+  </svg>
+  <span class="font-serif text-[16px] md:text-2xl tracking-[0.08em] whitespace-nowrap">
+  来場予約はこちらから
+</span>
+  <span class="text-2xl transition duration-300 group-hover:translate-x-1">›</span>
+</button>
+
+  </section>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お客様の声 | HIKARI HOME</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { navy: '#051122', gold: '#C79F5E', ivory: '#F7F5F0' } },
+          fontFamily: { serif: ['Noto Serif JP', 'serif'], sans: ['Noto Sans JP', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { margin:0; font-family:"Noto Sans JP", sans-serif; background:#051122; -webkit-font-smoothing:antialiased; }
+    .voice-bg {
+      background:
+        radial-gradient(circle at 12% 18%, rgba(199,159,94,.10), transparent 18%),
+        radial-gradient(circle at 90% 82%, rgba(199,159,94,.10), transparent 20%),
+        linear-gradient(180deg, #06152a 0%, #051122 55%, #06152a 100%);
+    }
+    .gold-dust { position:absolute; width:3px; height:3px; border-radius:999px; background:rgba(231,194,113,.9); box-shadow:0 0 10px rgba(231,194,113,.65); }
+    .leaf-line { position:absolute; width:118px; height:118px; opacity:.75; color:#C79F5E; pointer-events:none; }
+    .voice-card { box-shadow:0 10px 24px rgba(0,0,0,.22); }
+    .bottom-wave { position:absolute; inset-inline:0; bottom:-1px; height:84px; pointer-events:none; opacity:.8; }
+  </style>
+</head>
+<body>
+  <section id="voice" class="voice-bg relative overflow-hidden px-4 py-10 md:px-8 md:py-20 text-white">
+    <svg class="leaf-line left-0 top-3 md:left-8 md:top-8 md:w-44 md:h-44" viewBox="0 0 140 140" fill="none" stroke="currentColor" stroke-width="1.2">
+      <path d="M8 132 C42 92 40 44 78 8" />
+      <path d="M24 108 C10 100 8 86 18 76 C32 82 36 96 24 108Z"/>
+      <path d="M38 82 C22 75 20 60 32 50 C48 58 52 72 38 82Z"/>
+      <path d="M54 58 C40 48 42 34 58 28 C70 42 68 54 54 58Z"/>
+      <path d="M74 34 C64 20 70 8 88 6 C94 22 88 32 74 34Z"/>
+    </svg>
+
+    <svg class="leaf-line right-0 top-3 rotate-90 md:right-8 md:top-8 md:w-44 md:h-44" viewBox="0 0 140 140" fill="none" stroke="currentColor" stroke-width="1.2">
+      <path d="M8 132 C42 92 40 44 78 8" />
+      <path d="M24 108 C10 100 8 86 18 76 C32 82 36 96 24 108Z"/>
+      <path d="M38 82 C22 75 20 60 32 50 C48 58 52 72 38 82Z"/>
+      <path d="M54 58 C40 48 42 34 58 28 C70 42 68 54 54 58Z"/>
+      <path d="M74 34 C64 20 70 8 88 6 C94 22 88 32 74 34Z"/>
+    </svg>
+
+    <span class="gold-dust left-[8%] top-[18%]"></span>
+    <span class="gold-dust right-[12%] top-[28%]"></span>
+    <span class="gold-dust left-[5%] bottom-[22%]"></span>
+    <span class="gold-dust right-[8%] bottom-[16%]"></span>
+
+    <div class="relative z-10 mx-auto max-w-[430px] md:max-w-5xl">
+      <div class="text-center">
+        <div class="flex items-center justify-center gap-4">
+          <span class="h-px w-12 bg-brand-gold/70 md:w-20"></span>
+          <p class="font-serif text-[15px] tracking-[0.28em] text-brand-gold md:text-xl">VOICE</p>
+          <span class="h-px w-12 bg-brand-gold/70 md:w-20"></span>
+        </div>
+        <h2 class="mt-3 font-serif text-[36px] tracking-[0.12em] text-white md:text-6xl">お客様の声</h2>
+        <p class="mt-4 text-[11px] leading-relaxed tracking-[0.08em] text-white/90 md:text-base">
+          実際にご見学いただいたお客様から、<br class="md:hidden">嬉しいお声をいただいております。
+        </p>
+      </div>
+
+      <div class="mt-7 space-y-4 md:mt-12 md:space-y-6">
+        <article class="voice-card grid grid-cols-[42%_1fr] gap-3 rounded-md bg-brand-ivory p-3 text-brand-navy transition duration-300 hover:-translate-y-1 md:grid-cols-[38%_1fr] md:gap-8 md:p-7">
+          <div class="overflow-hidden rounded-sm bg-white">
+            <img src="./voice_family01.png" alt="30代ご夫婦とお子様1人" class="h-full min-h-[132px] w-full object-cover md:min-h-[240px]">
+          </div>
+          <div class="flex flex-col justify-center">
+            <h3 class="font-serif text-[10px] font-semibold leading-[1.65] tracking-[0.05em] md:text-3xl">家事動線が本当にラクで、<br>毎日の暮らしが快適になりました。</h3>
+            <p class="mt-3 text-[8px] leading-[1.85] tracking-[0.03em] text-black/85 md:mt-6 md:text-base">キッチンから洗面・収納までの動線がとてもスムーズで、家事の時短につながりました。収納もたっぷりで、家の中がいつもすっきり片付いています。</p>
+            <p class="mt-2 text-right text-[8px] text-black/90 md:mt-5 md:text-sm">30代ご夫婦＋お子様1人</p>
+          </div>
+        </article>
+
+        <article class="voice-card grid grid-cols-[42%_1fr] gap-3 rounded-md bg-brand-ivory p-3 text-brand-navy transition duration-300 hover:-translate-y-1 md:grid-cols-[38%_1fr] md:gap-8 md:p-7">
+          <div class="overflow-hidden rounded-sm bg-white">
+            <img src="./voice_family02.png" alt="40代ご夫婦とお子様2人" class="h-full min-h-[132px] w-full object-cover md:min-h-[240px]">
+          </div>
+          <div class="flex flex-col justify-center">
+            <h3 class="font-serif text-[10px] font-semibold leading-[1.65] tracking-[0.05em] md:text-3xl">広さと開放感に驚きました。<br>家族がのびのび過ごせそうです。</h3>
+            <p class="mt-3 text-[8px] leading-[1.85] tracking-[0.03em] text-black/85 md:mt-6 md:text-base">吹き抜けのリビングは想像以上に明るくて開放的でした。子どもたちがリビングでのびのび遊べるのが嬉しいです。</p>
+            <p class="mt-2 text-right text-[8px] text-black/90 md:mt-5 md:text-sm">40代ご夫婦＋お子様2人</p>
+          </div>
+        </article>
+
+        <article class="voice-card grid grid-cols-[42%_1fr] gap-3 rounded-md bg-brand-ivory p-3 text-brand-navy transition duration-300 hover:-translate-y-1 md:grid-cols-[38%_1fr] md:gap-8 md:p-7">
+          <div class="overflow-hidden rounded-sm bg-white">
+            <img src="./voice_couple01.png" alt="30代ご夫婦" class="h-full min-h-[132px] w-full object-cover md:min-h-[240px]">
+          </div>
+          <div class="flex flex-col justify-center">
+            <h3 class="font-serif text-[10px] font-semibold leading-[1.65] tracking-[0.05em] md:text-3xl">デザインも性能も<br>こだわりが詰まっていて、<br>安心してお任せできると感じました。</h3>
+            <p class="mt-3 text-[8px] leading-[1.85] tracking-[0.03em] text-black/85 md:mt-6 md:text-base">見た目のデザインだけでなく、断熱性や耐震性などの性能面もしっかり説明してもらえて安心できました。</p>
+            <p class="mt-2 text-right text-[8px] text-black/90 md:mt-5 md:text-sm">30代ご夫婦</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="relative z-10 mt-6 text-center md:mt-10">
+        <p class="text-[12px] leading-[1.9] tracking-[0.1em] text-white/95 md:text-lg">理想の暮らしは、実際に体感してこそ見えてきます。</p>
+        <p class="font-serif text-[17px] leading-[1.8] tracking-[0.08em] text-white md:text-2xl">
+          ぜひ、<span class="text-brand-gold">住まいの心地よさ</span>をご体感ください。
+        </p>
+      </div>
+    </div>
+
+  <div class="absolute bottom-6 left-0 w-full h-px bg-brand-gold/50 pointer-events-none"></div>
+</section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>開催概要 | HIKARI HOME</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { navy: '#051122', gold: '#C79F5E', ivory: '#F7F2E8', text: '#07172E' } },
+          fontFamily: { serif: ['Noto Serif JP', 'serif'], sans: ['Noto Sans JP', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { margin:0; background:#f7f2e8; font-family:"Noto Sans JP", sans-serif; -webkit-font-smoothing:antialiased; }
+    .paper-bg { background: radial-gradient(circle at 15% 12%, rgba(199,159,94,.12), transparent 18%), radial-gradient(circle at 92% 24%, rgba(199,159,94,.13), transparent 18%), linear-gradient(180deg, rgba(255,255,255,.58), rgba(247,242,232,.94)), #f7f2e8; }
+    .shine { position:absolute; width:22px; height:22px; color:#c79f5e; opacity:.8; }
+    .shine::before,.shine::after { content:""; position:absolute; left:50%; top:50%; background:currentColor; transform:translate(-50%,-50%); border-radius:999px; }
+    .shine::before { width:2px; height:22px; }
+    .shine::after { width:22px; height:2px; }
+    .section-wave { position:absolute; left:0; right:0; top:122px; height:64px; pointer-events:none; }
+    .info-card { box-shadow:0 8px 20px rgba(5,17,34,.08); }
+  </style>
+</head>
+<body>
+  <section id="information" class="paper-bg relative overflow-hidden px-5 pt-8 pb-10 md:px-8 md:pt-16 md:pb-20">
+    <span class="shine left-[8%] top-[70px] md:left-[18%]"></span>
+    <span class="shine left-[14%] top-[122px] scale-75 md:left-[25%]"></span>
+    <span class="shine right-[10%] top-[54px] md:right-[22%]"></span>
+    <span class="shine right-[17%] top-[92px] scale-75 md:right-[30%]"></span>
+
+
+    <div class="relative z-10 mx-auto max-w-[430px] md:max-w-4xl">
+      <div class="text-center">
+        <div class="flex items-center justify-center gap-4">
+          <span class="h-px w-10 bg-brand-gold md:w-16"></span>
+          <p class="font-serif text-[15px] tracking-[0.22em] text-brand-gold md:text-xl">INFORMATION</p>
+          <span class="h-px w-10 bg-brand-gold md:w-16"></span>
+        </div><br>
+        <h2 class="mt-2 font-serif text-[34px] font-semibold leading-none tracking-[0.08em] text-[#333] md:text-6xl">開催概要</h2><br>
+        <p class="mt-3 text-[11px] leading-[1.7] tracking-[0.04em] text-black/85 md:text-base">
+          ご見学は完全予約制となっております。<br>事前のご予約をお願いいたします。
+        </p>
+      </div>
+
+      <div class="mt-12 space-y-4 md:mt-16 md:space-y-6">
+        <article class="info-card overflow-hidden rounded-[3px] bg-white">
+          <div class="flex items-center justify-center gap-3 bg-brand-navy py-2 text-white md:py-3">
+            <svg class="h-5 w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path>
+            </svg>
+            <h3 class="font-serif text-[20px] tracking-[0.18em] md:text-2xl">日時</h3>
+          </div>
+         <!-- 日時の中身 -->
+<div class="bg-white px-5 py-6 text-brand-navy md:px-10 md:py-8">
+  
+
+  <div class="mt-2 flex items-center justify-center gap-3 md:gap-6">
+    <span class="font-serif text-[50px] leading-none md:text-[70px]">6/14</span>
+    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-navy text-white text-lg">土</span>
+    <span class="font-serif text-[50px] leading-none md:text-[70px]">15</span>
+    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#d04b4b] text-white text-lg">日</span>
+  </div>
+
+  <p class="mt-5 text-center text-[28px] md:text-[32px]">
+    10:00-17:00
+    <span class="ml-2 text-[13px] md:text-base">（最終受付16:00）</span>
+  </p>
+</div>
+        </article>
+
+        <article class="info-card overflow-hidden rounded-[3px] bg-white">
+          <div class="flex items-center justify-center gap-3 bg-brand-navy py-2 text-white md:py-3">
+            <svg class="h-5 w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"></path><circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <h3 class="font-serif text-[20px] tracking-[0.18em] md:text-2xl">場所</h3>
+          </div>
+          <div class="bg-white px-5 py-6 md:px-10">
+  <div class="grid grid-cols-[38%_1fr] items-center gap-5 md:gap-8">
+    <img src="./info_house.png" class="w-full rounded-sm object-cover">
+    <p class="font-serif text-[24px] leading-[1.55] text-brand-navy md:text-[30px]">
+      東京都練馬区光が丘7-14-8
+    </p>
+  </div>
+</div>
+        </article>
+
+        <article class="info-card overflow-hidden rounded-[3px] bg-white">
+          <div class="flex items-center justify-center gap-3 bg-brand-navy py-2 text-white md:py-3">
+            <svg class="h-5 w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17h10M5 17V9l2-4h10l2 4v8"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle>
+            </svg>
+            <h3 class="font-serif text-[20px] tracking-[0.18em] md:text-2xl">駐車場</h3>
+          </div>
+          <div class="bg-white px-5 py-6 md:px-10">
+  <div class="grid grid-cols-[38%_1fr] items-center gap-5 md:gap-8">
+    <img src="./info_parking.png" class="w-full rounded-sm object-cover">
+    <p class="font-serif text-[24px] leading-[1.55] text-brand-navy md:text-[30px]">
+      専用駐車場完備
+    </p>
+  </div>
+</div>
+        </article>
+      </div>
+
+      <div class="mt-4 grid grid-cols-3 rounded-md bg-white px-2 py-4 text-center shadow-[0_8px_20px_rgba(5,17,34,.08)] md:mt-8 md:px-8 md:py-6">
+        <div class="border-r border-brand-gold/45 px-1">
+          <svg class="mx-auto h-9 w-9 text-brand-gold md:h-14 md:w-14" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="32" cy="28" r="12"></circle><path d="M22 24c-4-6 2-14 10-8 8-6 14 2 10 8M20 44c6 8 18 8 24 0"></path>
+          </svg>
+          <h4 class="mt-2 text-[11px] font-bold text-brand-text md:text-lg">お子様連れ歓迎</h4>
+          <p class="mt-1 text-[8px] font-medium leading-[1.7] text-brand-text md:text-sm">キッズスペースを<br>ご用意しています。</p>
+        </div>
+        <div class="border-r border-brand-gold/45 px-1">
+          <svg class="mx-auto h-9 w-9 text-brand-gold md:h-14 md:w-14" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 28h28v8a12 12 0 01-12 12h-4a12 12 0 01-12-12v-8z"></path><path d="M46 30h4a5 5 0 010 10h-4M16 52h34"></path>
+          </svg>
+          <h4 class="mt-2 text-[11px] font-bold text-brand-text md:text-lg">ドリンクサービス</h4>
+          <p class="mt-1 text-[8px] font-medium leading-[1.7] text-brand-text md:text-sm">ゆっくりご見学<br>いただけます。</p>
+        </div>
+        <div class="px-1">
+          <svg class="mx-auto h-9 w-9 text-brand-gold md:h-14 md:w-14" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M32 8l20 8v14c0 13-8 22-20 26-12-4-20-13-20-26V16l20-8z"></path><path d="M23 32l6 6 13-14"></path>
+          </svg>
+          <h4 class="mt-2 text-[11px] font-bold text-brand-text md:text-lg">無理な営業なし</h4>
+          <p class="mt-1 text-[8px] font-medium leading-[1.7] text-brand-text md:text-sm">ご安心ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABOUT | HIKARI HOME</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { navy: '#051122', gold: '#C79F5E', ivory: '#F7F2E8', text: '#07172E' }
+          },
+          fontFamily: {
+            serif: ['Noto Serif JP', 'serif'],
+            sans: ['Noto Sans JP', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { margin:0; font-family:"Noto Sans JP", sans-serif; background:#f7f2e8; -webkit-font-smoothing:antialiased; }
+    .about-section {
+      background:
+        radial-gradient(circle at 14% 10%, rgba(199,159,94,.13), transparent 16%),
+        radial-gradient(circle at 88% 14%, rgba(199,159,94,.09), transparent 18%),
+        linear-gradient(to bottom, #fbf8ef 0%, #f7f2e8 36%, #d7dde6 55%, #244b75 74%, #051122 100%);
+    }
+    .photo-blend::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to bottom, transparent 0%, transparent 52%, rgba(5,17,34,.34) 76%, rgba(5,17,34,.88) 100%);
+      pointer-events:none;
+    }
+    .center-blur { background:linear-gradient(to right, transparent 0%, rgba(247,242,232,.70) 48%, rgba(247,242,232,.70) 52%, transparent 100%); }
+    .gold-dot { position:absolute; width:3px; height:3px; border-radius:999px; background:#e6c27a; box-shadow:0 0 10px rgba(230,194,122,.85); opacity:.85; }
+    .stat-divider { background:linear-gradient(to bottom, transparent, rgba(199,159,94,.65), transparent); }
+    .leaf { position:absolute; bottom:10px; width:90px; height:28px; color:#C79F5E; opacity:.8; pointer-events:none; }
+    .leaf-left { left:18%; }
+    .leaf-right { right:18%; transform:scaleX(-1); }
+    @media (max-width: 767px) {
+      .leaf-left { left:4%; }
+      .leaf-right { right:4%; }
+      .about-section {
+        background:
+          radial-gradient(circle at 12% 10%, rgba(199,159,94,.12), transparent 18%),
+          linear-gradient(to bottom, #fbf8ef 0%, #f7f2e8 42%, #d7dde6 58%, #244b75 75%, #051122 100%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section id="about" class="about-section relative overflow-hidden">
+  <div class="relative z-10 mx-auto max-w-[430px] px-5 pt-7 md:max-w-6xl md:px-8 md:pt-16">
+    <div class="text-center">
+      <div class="flex items-center justify-center gap-3">
+        <span class="h-px w-10 bg-brand-gold/70 md:w-16"></span>
+        <p class="font-serif text-[12px] tracking-[0.32em] text-brand-gold md:text-base">ABOUT</p>
+        <span class="h-px w-10 bg-brand-gold/70 md:w-16"></span>
+      </div>
+
+      <h2 class="mt-1 font-serif text-[25px] leading-[1.25] tracking-[0.18em] text-brand-text md:text-5xl">
+        HIKARI HOMEについて
+      </h2>
+
+      <p class="mx-auto mt-2 max-w-[340px] text-[8px] leading-[1.85] tracking-[0.06em] text-brand-text/80 md:mt-4 md:max-w-3xl md:text-sm">
+        地域に根ざした家づくりで、これからもご家族の笑顔を支えます。<br>
+        お客様一人ひとりに寄り添い、安心で快適な住まいをご提案いたします。
+      </p>
+    </div>
+
+    <div class="photo-blend relative mt-4 overflow-hidden md:mt-8">
+      <div class="grid grid-cols-2">
+        <div class="relative overflow-hidden">
+          <img src="./about_exterior.png" alt="モデルハウス外観" class="h-[145px] w-full object-cover transition duration-500 hover:scale-105 md:h-[360px]">
+        </div>
+        <div class="relative overflow-hidden">
+          <img src="./about_interior.png" alt="モデルハウス内観" class="h-[145px] w-full object-cover transition duration-500 hover:scale-105 md:h-[360px]">
+        </div>
+      </div>
+      <div class="center-blur absolute inset-y-0 left-1/2 w-20 -translate-x-1/2 pointer-events-none md:w-44"></div>
+    </div>
+  </div>
+
+  <div class="relative z-20 -mt-10 px-5 pb-8 pt-12 md:-mt-24 md:px-8 md:pb-12 md:pt-28">
+    <div class="mx-auto max-w-[430px] md:max-w-5xl">
+      <div class="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-start text-center text-white">
+        <div class="px-2"><br>
+          <svg class="mx-auto h-7 w-7 text-brand-gold md:h-12 md:w-12" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 31L32 13l22 18v24H17V35h14v20"/></svg>
+          <p class="mt-2 text-[9px] tracking-[0.16em] text-white/85 md:text-sm">年間施工実績</p>
+          <div class="mt-1 font-serif text-brand-gold drop-shadow-[0_0_10px_rgba(199,159,94,.28)]"><span class="text-[42px] leading-none md:text-7xl">120</span><span class="text-[14px] md:text-2xl">棟</span></div>
+        </div>
+
+        <div class="stat-divider h-[118px] w-px md:h-[170px]"></div>
+
+        <div class="px-2"><br>
+          <svg class="mx-auto h-7 w-7 text-brand-gold md:h-12 md:w-12" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 58s18-17 18-34A18 18 0 1014 24c0 17 18 34 18 34z"/><circle cx="32" cy="24" r="6"/></svg>
+          <p class="mt-2 text-[9px] tracking-[0.16em] text-white/85 md:text-sm">地域密着</p>
+          <div class="mt-1 font-serif text-brand-gold drop-shadow-[0_0_10px_rgba(199,159,94,.28)]"><span class="text-[42px] leading-none md:text-7xl">25</span><span class="text-[14px] md:text-2xl">年</span></div>
+        </div>
+
+        <div class="stat-divider h-[118px] w-px md:h-[170px]"></div>
+
+        <div class="px-2"><br>
+          <svg class="mx-auto h-7 w-7 text-brand-gold md:h-12 md:w-12" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="23"/><path d="M23 36c4 6 14 6 18 0M24 26h.01M40 26h.01"/></svg>
+          <p class="mt-2 text-[9px] tracking-[0.16em] text-white/85 md:text-sm">お客様満足度</p>
+          <div class="mt-1 font-serif text-brand-gold drop-shadow-[0_0_10px_rgba(199,159,94,.28)]"><span class="text-[42px] leading-none md:text-7xl">98</span><span class="text-[14px] md:text-2xl">%</span></div>
+        </div>
+      </div>
+
+      <p class="mt-4 text-center text-[9px] leading-[1.8] tracking-[0.08em] text-white/85 md:mt-8 md:text-sm">
+        これからも地域の皆さまに愛される住まいづくりを続けてまいります。
+      </p>
+    </div>
+
+    <span class="gold-dot left-[7%] bottom-[22%]"></span>
+    <span class="gold-dot left-[13%] bottom-[15%]"></span>
+    <span class="gold-dot right-[9%] bottom-[25%]"></span>
+    <span class="gold-dot right-[14%] bottom-[14%]"></span>
+
+    <svg class="leaf leaf-left" viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1.3">
+      <path d="M5 30 C35 6 78 8 113 28"/>
+      <path d="M26 20 C22 12 26 7 36 9 C37 18 33 22 26 20Z"/>
+      <path d="M50 15 C48 6 54 2 64 6 C63 16 57 19 50 15Z"/>
+      <path d="M75 16 C78 7 86 6 93 13 C88 22 80 23 75 16Z"/>
+    </svg>
+
+    <svg class="leaf leaf-right" viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1.3">
+      <path d="M5 30 C35 6 78 8 113 28"/>
+      <path d="M26 20 C22 12 26 7 36 9 C37 18 33 22 26 20Z"/>
+      <path d="M50 15 C48 6 54 2 64 6 C63 16 57 19 50 15Z"/>
+      <path d="M75 16 C78 7 86 6 93 13 C88 22 80 23 75 16Z"/>
+    </svg>
+  </div>
+</section>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTA | HIKARI HOME</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#051122',
+              gold: '#C79F5E',
+              goldLight: '#E4BE72'
+            }
+          },
+          fontFamily: {
+            serif: ['Noto Serif JP', 'serif'],
+            sans: ['Noto Sans JP', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", sans-serif;
+      background: #051122;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .cta-bg {
+      background:
+        linear-gradient(90deg, rgba(5,17,34,.96) 0%, rgba(5,17,34,.85) 40%, rgba(5,17,34,.35) 75%, rgba(5,17,34,.18) 100%),
+        linear-gradient(180deg, rgba(5,17,34,.92) 0%, rgba(5,17,34,.56) 45%, rgba(5,17,34,.96) 100%),
+        url("./cta_house.png");
+      background-size: cover;
+      background-position: center right;
+    }
+
+    @media (max-width: 767px) {
+      .cta-bg {
+        background:
+          linear-gradient(180deg, rgba(5,17,34,.98) 0%, rgba(5,17,34,.72) 38%, rgba(5,17,34,.40) 62%, rgba(5,17,34,.98) 100%),
+          url("./cta_house.png");
+        background-size: cover;
+        background-position: center bottom;
+      }
+    }
+
+    .gold-text {
+      color: #E4BE72;
+      text-shadow: 0 0 16px rgba(228,190,114,.22);
+    }
+
+    .gold-button {
+      background: linear-gradient(180deg, #E7C777 0%, #C79F5E 54%, #B98D43 100%);
+      box-shadow:
+        0 14px 30px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.35);
+    }
+
+    .gold-button:hover {
+      filter: brightness(1.08);
+      transform: translateY(-2px);
+      box-shadow:
+        0 18px 34px rgba(0,0,0,.42),
+        inset 0 1px 0 rgba(255,255,255,.4);
+    }
+
+    .line {
+      background: linear-gradient(90deg, transparent, rgba(199,159,94,.8), transparent);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CTA SECTION -->
+  <section id="cta" class="cta-bg relative min-h-[430px] overflow-hidden text-white md:min-h-[360px]">
+
+    <div class="relative z-10 mx-auto max-w-[430px] px-7 py-10 md:max-w-6xl md:px-12 md:py-20">
+      <!-- Text -->
+      <div class="max-w-[360px] md:max-w-xl">
+        <h2 class="font-serif text-[20px] md:text-[42px] font-semibold leading-[1.7] tracking-[0.05em] gold-text">
+    理想の暮らしを、<br>
+    ぜひ現地でご体感ください。
+</h2>
+
+        <div class="mt-7 h-px w-[180px] bg-brand-gold/70 md:mt-10 md:w-[280px]"></div>
+
+        <p class="mt-5 text-[12px] font-light leading-[2.05] tracking-[0.08em] text-white/90 md:text-base">
+          図面や写真だけでは伝わらない、<br>
+          住み心地や広さ、家事動線を<br>
+          実際の住まいでご確認いただけます。
+        </p>
+
+        <p class="mt-7 text-[12px] font-light leading-[2.05] tracking-[0.08em] text-white/90 md:text-base">
+          完全予約制となりますので、<br>
+          お早めのご予約をおすすめいたします。
+        </p>
+      </div><br>
+
+      <!-- Bottom CTA -->
+      <div class="mt-4 text-center">
+  <button onclick="openModal()" class="group inline-flex w-[310px] max-w-full items-center justify-center gap-4 rounded-full bg-brand-gold px-7 py-4 text-white shadow-[0_10px_24px_rgba(0,0,0,.3)] transition duration-300 hover:bg-[#b58d4f] hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(0,0,0,.38)] md:w-[460px] md:py-5">
+    <svg class="h-5 w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="4" width="18" height="18" rx="2"/>
+      <path d="M16 2v4M8 2v4M3 10h18"/>
+    </svg>
+
+    <span class="font-serif text-[16px] md:text-2xl tracking-[0.08em] whitespace-nowrap">
+      来場予約はこちらから
+    </span>
+
+    <span class="text-2xl transition duration-300 group-hover:translate-x-1">›</span>
+  </button>
+</div>
+
+        <div class="mt-12 flex items-center justify-center gap-4">
+    <span class="h-px w-12 bg-brand-gold/60"></span>
+
+    <p class="font-serif text-sm tracking-[0.08em] text-white/80">
+        現地でご体感ください。
+    </p>
+
+    <span class="h-px w-12 bg-brand-gold/60"></span>
+</div>
+
+    </div>
+  </section>
+
+  
+
+</body>
+</html>
